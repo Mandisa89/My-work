@@ -1,0 +1,183 @@
+/* Layout with four columns inside the gallery box was adapted from the W3C example here: https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_image_gallery */
+
+* {
+    box-sizing: border-box;
+    line-height: 1.2em;
+  }
+  
+  body {
+    margin: 0;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .fc {
+    display: flex;
+    flex-flow: row wrap;
+    min-height: calc(100vh - 100px);
+    width: 100vw;
+  }
+  
+  .fc > * {
+    box-sizing: border-box;
+    background-color: #ba68c8;
+    color: white;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 15px;
+    width: 100vw;
+    text-align: center;
+    line-height: 1.5;
+    
+  }
+  
+  header, nav, footer {
+    box-sizing: border-box;
+    text-align: center;
+    min-height: 50px;
+    width: 100vw;
+    background-color: white;
+    color: #883997;
+    padding: 15px;
+    margin: 0.25em auto;
+    border-radius: 15px; 
+  }
+  
+  header, .fc, footer {
+    
+    background-image: url("https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-radius: 15px; 
+  }
+  
+  nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    
+  }
+  
+  nav a {
+    padding: 10px;
+    color: #883997;
+    background-color: #fff7ff;
+    border-radius: 10px;
+    margin: 5px;
+    box-shadow: 1px 1px 6px lightgrey;
+  }
+  
+  footer {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    padding: 30px;
+    background-color: transparent;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    font-size: 1.5em; 
+    font-family: 'Major Mono Display', monospace;
+    margin-bottom: 1em;
+    padding: 0 1em 0 1em;
+    max-width: 100vw;
+  }
+  
+  h1 {
+    font-size: 5em;
+  }
+  #sub-heading, span {
+    text-align: center;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+  }
+  
+  #gallery {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    width: 100%;
+  }
+  
+  #gallery h2 {
+    width: 100%;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: transparent;
+    flex: 25%;
+    max-width: 25%;
+    padding: 4px;
+    
+  }
+  
+  @media (max-width: 800px) {
+    body {
+      font-size: 18px;
+    }
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+    }
+    .column {
+      background-color: transparent;
+      flex: 50%;
+      max-width: 50%;
+    }
+    
+    
+  }
+  
+  @media (max-width: 600px) {
+    body {
+      font-size: 16px;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    .column {
+      background-color: transparent;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+  
+  .gallery-images {
+    max-width: 100%;
+    box-sizing: border-box;
+    align-self: baseline;
+    /* important to change it from the default "stretch", which will warp the images */
+    border: 4px solid  #883997;
+    border-radius: 5px;
+  }
+  
+  a {
+    color: ;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    transform: scale(1.05);
+  }
+  
+  a:active {
+    background-color: #9c27b0;
+    color: white
+  }
+  
+  a:visited {
+    color: #ffb300;
+  }
+  
+  
